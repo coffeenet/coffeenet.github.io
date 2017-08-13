@@ -3,24 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://coffeenet.rocks/posts/my-first-post/</loc>
-    <lastmod>2017-08-13T21:06:17+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://coffeenet.rocks/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://coffeenet.rocks/</loc>
-    <lastmod>2017-08-13T21:06:17+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://coffeenet.rocks/posts/</loc>
-    <lastmod>2017-08-13T21:06:17+02:00</lastmod>
     <priority>0</priority>
   </url>
   
