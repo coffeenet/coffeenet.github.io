@@ -3,12 +3,53 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://coffeenet.rocks/projects/starter-discovery/</loc>
+  </url>
+  
+  <url>
+    <loc>http://coffeenet.rocks/projects/starter-logging/</loc>
+  </url>
+  
+  <url>
+    <loc>http://coffeenet.rocks/projects/starter-navigation-javascript/</loc>
+  </url>
+  
+  <url>
+    <loc>http://coffeenet.rocks/projects/starter-navigation-thymeleaf/</loc>
+  </url>
+  
+  <url>
+    <loc>http://coffeenet.rocks/projects/starter-security/</loc>
+  </url>
+  
+  <url>
+    <loc>http://coffeenet.rocks/projects/auth-server/</loc>
+  </url>
+  
+  <url>
+    <loc>http://coffeenet.rocks/projects/config-server/</loc>
+  </url>
+  
+  <url>
+    <loc>http://coffeenet.rocks/projects/discovery-server/</loc>
+  </url>
+  
+  <url>
+    <loc>http://coffeenet.rocks/projects/frontpage/</loc>
+  </url>
+  
+  <url>
     <loc>http://coffeenet.rocks/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://coffeenet.rocks/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://coffeenet.rocks/projects/</loc>
     <priority>0</priority>
   </url>
   

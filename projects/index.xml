@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CoffeeNet</title>
-    <link>http://coffeenet.rocks/</link>
-    <description>Recent content on CoffeeNet</description>
+    <title>Projects on CoffeeNet</title>
+    <link>http://coffeenet.rocks/projects/</link>
+    <description>Recent content in Projects on CoffeeNet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://coffeenet.rocks/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://coffeenet.rocks/projects/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

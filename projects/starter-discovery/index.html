@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>Starter - Discovery</title>
+
+
+<link rel="stylesheet" href="/css/coffeenet.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <a class="navbar-brand" href="http://coffeenet.rocks/">
+            <img class="coffeenet--navbar-logo" src="http://coffeenet.rocks/img/logo.png" alt="CoffeeNet Logo">
+        </a>
+
+        
+    </nav>
+</header>
+
+
+<div class="coffeenet--teaser">
+    <img class="coffeenet--teaser-bar" src="http://coffeenet.rocks/img/element_bar.svg" alt="CoffeeNet Counter">
+</div>
+
+
+<main class="coffeenet--main">
+    
+
+<h1 id="coffeenet-starter-discovery">CoffeeNet Starter - Discovery</h1>
+
+<p>This CoffeeNet starter configures the service discovery for your application,
+provides your application as client to the discovery service and offers already
+known clients to you by the <code>coffee.synyx.autoconfigure.discovery.service.CoffeeNetAppService</code>.</p>
+
+<h2 id="getting-started">Getting started</h2>
+
+<p>This is a module in the starter set, so you first need to declare your project
+as a child of the starter <code>parent</code> by editing the <code>pom.xml</code> file.</p>
+
+<pre><code class="language-xml">&lt;parent&gt;
+    &lt;groupId&gt;coffee.synyx&lt;/groupId&gt;
+    &lt;artifactId&gt;coffeenet-starter-parent&lt;/artifactId&gt;
+    &lt;version&gt;${parent.version}&lt;/version&gt;
+    &lt;relativePath /&gt;
+&lt;/parent&gt;
+</code></pre>
+
+<p>and adding the repository to receive the dependencies</p>
+
+<pre><code class="language-xml">&lt;repositories&gt;
+  &lt;repository&gt;
+    &lt;id&gt;releases.public.nexus.synyx.de&lt;/id&gt;
+    &lt;url&gt;http://nexus.synyx.de/content/repositories/public-releases&lt;/url&gt;
+  &lt;/repository&gt;
+&lt;/repositories&gt;
+</code></pre>
+
+<p>Now you can enable service discovery in your project, by first adding the dependency:</p>
+
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;coffee.synyx&lt;/groupId&gt;
+    &lt;artifactId&gt;starter-discovery&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<p>In order to get everything up and running there are some requirements that
+your project must fulfill.</p>
+
+<h2 id="configuration">Configuration</h2>
+
+<pre><code class="language-yaml">coffeenet:
+  application-name:
+  allowed-authorities:
+  profile: development
+  discovery:
+    enabled: true
+    client:
+      service-url:
+        defaultZone: http://localhost:8761/eureka/
+    instance:
+      hostname: localhost
+      non-secure-port: 8080
+      home-page-url:
+</code></pre>
+
+<p>The configuration with their default values.</p>
+
+<p><code>coffeenet.allowed-authorities</code> is a comma separated list that filters the application
+from the navigation bar if the user does not have the required roles.</p>
+
+<p>The service discovery tries to communicate with the discovery service, if the configuration</p>
+
+<pre><code class="language-yaml">coffeenet:
+  profile: integration
+</code></pre>
+
+<p>is activated. If it is on <code>development</code> a mock service will be used.</p>
+
+</main>
+
+
+<footer class="coffeenet--footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm">
+                <p class="text-center">Copyright &copy; 2018 CoffeeNet.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

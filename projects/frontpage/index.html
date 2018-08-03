@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>Frontpage</title>
+
+
+<link rel="stylesheet" href="/css/coffeenet.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <a class="navbar-brand" href="http://coffeenet.rocks/">
+            <img class="coffeenet--navbar-logo" src="http://coffeenet.rocks/img/logo.png" alt="CoffeeNet Logo">
+        </a>
+
+        
+    </nav>
+</header>
+
+
+<div class="coffeenet--teaser">
+    <img class="coffeenet--teaser-bar" src="http://coffeenet.rocks/img/element_bar.svg" alt="CoffeeNet Counter">
+</div>
+
+
+<main class="coffeenet--main">
+    
+
+<p><a href="https://travis-ci.org/coffeenet/coffeenet-frontpage"><img src="https://travis-ci.org/coffeenet/coffeenet-frontpage.svg?branch=master" alt="Build Status" /></a>
+<a href="https://coveralls.io/github/coffeenet/coffeenet-frontpage?branch=master"><img src="https://coveralls.io/repos/github/coffeenet/coffeenet-frontpage/badge.svg?branch=master" alt="Coverage Status" /></a></p>
+
+<h1 id="coffeenet-frontpage">CoffeeNet Frontpage</h1>
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/coffeenet/coffeenet.github.io/code/static/img/coffenet_logo.png" width="256px" alt="CoffeeNet Logo" />
+</p>
+
+<p align="center">
+    the personalisable frontpage of the CoffeeNet
+</p>
+
+<p>The CoffeeNet Frontpage is a personalisable landingpage, which uses a plugin
+based mechanism for adding widgets like feeds, clock or <a href="https://islieb.de/">isLieb-comic</a>.
+You can write your own plugin and intregrate with the frontpage.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<ul>
+<li>Java 8</li>
+<li>Docker 17.06.0+</li>
+<li>Docker Compose 1.20.x</li>
+</ul>
+
+<h2 id="development">Development</h2>
+
+<p>Start application and environment (<a href="https://www.mongodb.com">MongoDB</a>) is used for persistence)</p>
+
+<pre><code>docker-compose up
+./mvnw clean spring-boot:run
+</code></pre>
+
+<p><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-devtools.html">Spring Boot DevTools</a> are also included for inflight changes.</p>
+
+<h3 id="example-plugin-setup">Example Plugin Setup</h3>
+
+<p>All plugins from the CoffeeNet team can be found in the <a href="https://github.com/search?q=topic%3Afrontpage-plugin+org%3Acoffeenet&amp;type=Repositories">CoffeeNet Organisation</a>.</p>
+
+<h2 id="add-plugin">Add Plugin</h2>
+
+<p>If you want to use a plugin you can download the <code>jar</code> e.g. from the
+<a href="https://github.com/coffeenet/coffeenet-frontpage-plugin-feed/releases">Releases</a> section. The plugin <code>jar</code> must be placed in
+<code>/plugins</code>-directory beside the frontpage application:</p>
+
+<pre><code>frontpage.jar
+plugins/
+ \-- coffeenet-frontpage-plugin-feed.jar
+</code></pre>
+
+<h2 id="build-your-own-plugin">Build your own plugin</h2>
+
+<p>An CoffeeNet frontpage plugin have to implement the <a href="https://github.com/coffeenet/coffeenet-frontpage-plugin-api">API</a>. An
+example is the <a href="https://github.com/coffeenet/coffeenet-frontpage-plugin-clock">clock plugin</a> with <a href="https://github.com/coffeenet/coffeenet-frontpage-plugin-clock/blob/master/src/main/java/coffee/synyx/frontpage/plugin/clock/ClockPlugin.java">implementation</a>
+of the frontpage plugin interface. Little more complex plugin example is the <a href="https://github.com/coffeenet/coffeenet-frontpage-plugin-feed">feed plugin</a>.</p>
+
+</main>
+
+
+<footer class="coffeenet--footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm">
+                <p class="text-center">Copyright &copy; 2018 CoffeeNet.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

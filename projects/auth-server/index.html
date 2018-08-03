@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>Auth Server</title>
+
+
+<link rel="stylesheet" href="/css/coffeenet.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <a class="navbar-brand" href="http://coffeenet.rocks/">
+            <img class="coffeenet--navbar-logo" src="http://coffeenet.rocks/img/logo.png" alt="CoffeeNet Logo">
+        </a>
+
+        
+    </nav>
+</header>
+
+
+<div class="coffeenet--teaser">
+    <img class="coffeenet--teaser-bar" src="http://coffeenet.rocks/img/element_bar.svg" alt="CoffeeNet Counter">
+</div>
+
+
+<main class="coffeenet--main">
+    
+
+<p><a href="https://travis-ci.org/coffeenet/coffeenet-auth"><img src="https://travis-ci.org/coffeenet/coffeenet-auth.svg?branch=master" alt="Build Status" /></a></p>
+
+<h1 id="coffeenet-auth-server">CoffeeNet Auth Server</h1>
+
+<p>The CoffeeNet Auth Server is an OAuth2 provider to achieve single sign-on for the CoffeeNet.
+It authenticates against a LDAP-Server. See <a href="#ldap">how to configure LDAP</a>
+To use the Auth-Server in your application, see <a href="https://github.com/coffeenet/coffeenet-starter/tree/master/coffeenet-starter-sso">README of CoffeeNet Starter Security</a>.</p>
+
+<h2 id="configuration">Configuration</h2>
+
+<h3 id="developer-mode">Developer Mode</h3>
+
+<p>The Auth-Server can be started in developer mode by setting the property <code>auth.development</code> to <code>true</code>.
+By doing this, a default client is created during startup.
+This client can be used to test your application with integration into the Auth-Server.</p>
+
+<p>Details of the default client:</p>
+
+<pre><code class="language-yaml">clientId: coffeeNetClient
+clientSecret: coffeeNetClientSecret
+</code></pre>
+
+<p>This can be used in none production environments for testing purposes.</p>
+
+<h3 id="json-web-token-jwt">Json Web Token (JWT)</h3>
+
+<p>JWT can be signed asymmetrical and the private key will be saved in
+the Java KeyStore (JKS).</p>
+
+<pre><code class="language-yaml">auth:
+  keystore:
+    enabled: false
+    jksPassword:
+    jksAlias: 'coffeenet'
+    jksPath: 'file:coffeenet.jks'
+</code></pre>
+
+<p>The JKS is disabled by default. Just provide the path to your jks file
+that can created with the following command:</p>
+
+<pre><code class="language-bash">keytool -genkeypair -alias ${alias} -keyalg RSA -dname &quot;CN=jwt, L=${L}, S=${S}, C=${DE}&quot; -keypass ${yourSecret} -keystore ${myKeystore.jks} -storepass ${yourSecret}
+</code></pre>
+
+<p>e.g.</p>
+
+<pre><code class="language-bash">keytool -genkeypair -alias coffeenet -keyalg RSA -dname &quot;CN=jwt, L=Berlin, S=Berlin, C=DE&quot; -keypass changeit -keystore coffeenet.jks -storepass changeit
+</code></pre>
+
+<p>The <code>auth.keystore.jksPath</code> property:
+* Must support fully qualified URLs, e.g. &ldquo;file:C:/test.dat&rdquo;.
+* Must support classpath pseudo-URLs, e.g. &ldquo;classpath:test.dat&rdquo;.
+* Should support relative file paths, e.g. &ldquo;WEB-INF/test.dat&rdquo;.
+  (This will be implementation-specific, typically
+  provided by an ApplicationContext implementation.)</p>
+
+<h3 id="ldap">LDAP</h3>
+
+<p>To configure the connection to your LDAP-Server just set the following properties inside your <code>application.yml</code>.
+This example shows the properties to connect with the LDAP-Server provided by our docker container.</p>
+
+<pre><code class="language-yaml">auth:
+  ldap:
+    url: ldap://localhost:38900
+    base: dc=coffeenet
+    userSearchBase: ou=People
+    userSearchFilter: uid={0}
+    groupSearchBase: ou=Groups
+    groupSearchFilter: member={0}
+</code></pre>
+
+<h3 id="database">Database</h3>
+
+<p>Specify the following properties inside your <code>application.yml</code>.
+The following example is configures the application to use the mysql database provided by our docker container.</p>
+
+<pre><code class="language-yaml">spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/${database}
+    driver-className: com.mariadb.jdbc.Driver
+    username: ${username}
+    password: ${password}
+    data: ${pathToData.sql}
+</code></pre>
+
+<h3 id="logging">Logging</h3>
+
+<p>Logging is provided by <a href="https://github.com/coffeenet/coffeenet-starter/tree/master/coffeenet-starter-logging">CoffeeNet Logging</a> and can be configured by setting
+properties below <code>coffeenet.logging.*</code> inside your <code>application.yml</code>.</p>
+
+<h3 id="service-discovery">Service Discovery</h3>
+
+<p>The Auth-Server uses <a href="https://github.com/coffeenet/coffeenet-starter/tree/master/coffeenet-starter-discovery">Coffeenet Service Discovery</a> and is only visible to users with the role <code>COFFEENET-ADMIN</code>.</p>
+
+<h2 id="endpoints">Endpoints</h2>
+
+<h3 id="user-endpoint">User Endpoint</h3>
+
+<p><code>/user</code> (Endpoint to retrieve user details)</p>
+
+<h4 id="request">Request</h4>
+
+<p>A <a href="#access-token">access token</a> is needed to get the user details via <code>/user?access_token=${access_token}</code></p>
+
+<h4 id="response">Response</h4>
+
+<p>Response for <strong>human user</strong>:</p>
+
+<pre><code class="language-json">{
+&quot;id&quot;:&quot;${username}&quot;,
+&quot;name&quot;:&quot;${username}&quot;,
+&quot;email&quot;:&quot;${email}&quot;,
+&quot;clientOnly&quot;:false,
+&quot;principal&quot;: {
+    &quot;mail&quot;:&quot;${email}&quot;,
+    &quot;authorities&quot;:[],
+    &quot;username&quot;:&quot;${username}&quot;
+    }
+}
+</code></pre>
+
+<p>Response for <strong>technical user</strong>:</p>
+
+<pre><code class="language-json">{
+&quot;id&quot;:&quot;${username}&quot;,
+&quot;name&quot;:&quot;${username}&quot;,
+&quot;clientOnly&quot;:true,
+&quot;principal&quot;: &quot;${username}&quot;
+}
+</code></pre>
+
+<h3 id="authorization-endpoint">Authorization Endpoint</h3>
+
+<p><code>/oauth/authorize</code> (User authorizes client to access the user endpoint)</p>
+
+<h3 id="token-endpoint">Token Endpoint</h3>
+
+<p><code>/oauth/token</code> (Used to get an access token. See <a href="#access-token">access token</a>)</p>
+
+<h2 id="create-a-new-oauth2-client">Create a new OAuth2 Client</h2>
+
+<p>A user with the role <code>COFFEENET-ADMIN</code> is able to create a new client at <code>http(s)://$host/clients/new</code>.</p>
+
+<h2 id="access-token">Access Token</h2>
+
+<h3 id="what-an-access-token-is-for">What an access token is for</h3>
+
+<p>The access token in CoffeeNet is used to retrieve user/clientdetails from the Auth-server.</p>
+
+<p><img src="docs/access_token_usage.png" alt="Access_Token_Usage" /></p>
+
+<ol>
+<li><p>System requests content of a CoffeeNet App with an access token.
+(Header: <code>Authorzitation: Bearer $accessToken</code>)</p></li>
+
+<li><p>CoffeeNet App uses access token to retrieve client details from Auth-Server</p></li>
+
+<li><p>Auth-Server resolves access token to client details and provides them to the CoffeeNet App</p></li>
+
+<li><p>CoffeeNet App provides content based on the returned client details</p></li>
+</ol>
+
+<h3 id="how-to-get-an-access-token">How to get an access token</h3>
+
+<p>There are multiple ways to obtain an access token. In all of them the
+ Resource Owner(User) has to grant the application the access to this token.</p>
+
+<p>The CoffeeNet Auth-Server provides the following grant types:
+* Authorization Code Grant (Used by web apps i.e. most CoffeeNet Apps)
+* Password Grant
+* Client Credentials Grant</p>
+
+<h4 id="authorization-code-grant">Authorization Code Grant</h4>
+
+<p>The most common used grant type is the authorization code grant
+type, since it&rsquo;s the flow that is used for web apps that redirect the
+user to the authorization server to obtain the token.
+This flow is the flow you see for example when you visit the coffeenet
+frontpage.</p>
+
+<p><img src="docs/authorization_code_web_flow.png" alt="Authorization Code Web Flow" /></p>
+
+<ol>
+<li>User navigates to CoffeeNet App</li>
+<li>CoffeeNet App checks if session is available for this user
+
+<ul>
+<li>YES: continue with step 13</li>
+<li>NO: continue with step 3</li>
+</ul></li>
+<li>CoffeeNet App sends redirect to Auth-Server (client-id, redirect uri
+in parameters)</li>
+<li>Auth-Server checks if session is available for this user
+
+<ul>
+<li>YES: continue with step 7</li>
+<li>NO: continue with step 5</li>
+</ul></li>
+<li>Auth-Server asks User to enter credentials (Login Form)</li>
+<li>User enters credentials</li>
+<li>Auth-Server sends redirect back to redirect uri (should be the address
+    of the CoffeeNet App) containing an authorization code in parameters.
+    Users won&rsquo;t event notice this step, if a on auth-server session
+    already exists.</li>
+<li>CoffeeNetApp requests token with the given authorization code and its
+    client credentials (meaning client-id and client-secret).</li>
+<li>Passes the access and refresh token back to the CoffeeNet App</li>
+<li>CoffeeNet App requests user details from Auth-Server with the obtained
+    access token.</li>
+<li>Auth-Server passes user details back to the CoffeeNet App</li>
+<li>CoffeeNet App Stores user details in a session</li>
+<li>CoffeeNet App provides content based on the user details</li>
+</ol>
+
+<h4 id="password-grant">Password Grant</h4>
+
+<p>This grant type is typically used by developers for testing purpose or systems.</p>
+
+<p><img src="docs/password_grant_type.png" alt="Password Grant_Type" /></p>
+
+<h5 id="request-1">Request</h5>
+
+<p>System or Developer requests (post) an access token. Request contains:
+* ClientId + ClientSecret as basic auth <strong>header</strong>:</p>
+
+<pre><code>`Authorization: basic base64(ClientId:ClientSecret)`
+</code></pre>
+
+<ul>
+<li><p>Grant type, username, password and scope in the <strong>body</strong>:</p>
+
+<p><code>grant_type=password&amp;username=$username&amp;password=$password&amp;scope=openid</code></p></li>
+</ul>
+
+<p>with header <code>Content-Type: application/x-www-form-urlencoded</code></p>
+
+<h5 id="response-1">Response</h5>
+
+<p>Auth-Server provides access token if username, password, clientId and
+clientSecret are correct.</p>
+
+<p>Response looks like this:</p>
+
+<pre><code class="language-json">{
+  &quot;access_token&quot;: &quot;6b311332-f57c-3ee2-a668-57c1db083a5p&quot;,
+  &quot;token_type&quot;: &quot;bearer&quot;,
+  &quot;expires_in&quot;: 42837,
+  &quot;scope&quot;: &quot;openid&quot;
+}
+</code></pre>
+
+<h4 id="client-credentials-grant">Client Credentials Grant</h4>
+
+<p>This grant type is typically used by systems. They request their access token
+from the Auth-Server and use it as authentication information for requests to
+any CoffeeNet App.</p>
+
+<p><img src="docs/client_credentials_grant_type.png" alt="Client_Credentials Grant_Type" /></p>
+
+<h5 id="request-2">Request</h5>
+
+<p>System requests (post) an access token. Request <strong>must</strong> contain:</p>
+
+<ul>
+<li><p>ClientId + ClientSecret as basic auth <strong>header</strong>:</p>
+
+<p><code>Authorization: basic base64(ClientId:ClientSecret)</code></p></li>
+
+<li><p>Grant type and scope in the <strong>body</strong>:</p>
+
+<p><code>grant_type=client_credentials&amp;scope=openid</code></p></li>
+</ul>
+
+<p>with header <code>Content-Type: application/x-www-form-urlencoded</code></p>
+
+<h5 id="response-2">Response</h5>
+
+<p>Auth-Server provides access token if clientId and clientSecret are correct.</p>
+
+<p>Response looks like this:</p>
+
+<pre><code class="language-json">{
+  &quot;access_token&quot;: &quot;6b311332-f57c-3ee2-a668-57c1db083a5p&quot;,
+  &quot;token_type&quot;: &quot;bearer&quot;,
+  &quot;expires_in&quot;: 43189,
+  &quot;scope&quot;: &quot;openid&quot;
+}
+</code></pre>
+
+</main>
+
+
+<footer class="coffeenet--footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm">
+                <p class="text-center">Copyright &copy; 2018 CoffeeNet.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
