@@ -12,31 +12,20 @@
 
 
 <link rel="stylesheet" href="/css/coffeenet.css"/>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </head>
 <body>
 
 
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-        <a class="navbar-brand" href="http://coffeenet.rocks/">
-            <img class="coffeenet--navbar-logo" src="http://coffeenet.rocks/img/logo.png" alt="CoffeeNet Logo">
-        </a>
-
-        
-    </nav>
+<header class="coffeenet--header">
+    <a href="http://coffeenet.rocks/">
+        <img class="coffeenet--header-logo" src="http://coffeenet.rocks/img/logo.png" alt="CoffeeNet Logo">
+    </a>
 </header>
 
 
 <div class="coffeenet--teaser">
-    <img class="coffeenet--teaser-bar" src="http://coffeenet.rocks/img/element_bar.svg" alt="CoffeeNet Counter">
+    <img class="coffeenet--teaser-bar" src="http://coffeenet.rocks/img/element_bar.svg" title="CoffeeNet" alt="CoffeeNet Counter">
 </div>
 
 
@@ -44,7 +33,7 @@
 <div class="coffeenet--project-grid">
     
     <div class="coffeenet--project-cell">
-        <header class="coffeenet--project-cell-header">
+        <div class="coffeenet--project-cell-header">
             <a href="/projects/starter-discovery/">Starter - Discovery</a>
 
             
@@ -53,7 +42,7 @@
                      alt="GitHub Logo">
             </a>
             
-        </header>
+        </div>
         <div class="coffeenet--project-cell-content">
             CoffeeNet Starter - Discovery This CoffeeNet starter configures the service discovery for your application, provides your application as client to the discovery service and offers already known clients to you by the coffee.synyx.autoconfigure.discovery.service.CoffeeNetAppService.
 Getting started This is a module in the starter set, so you first need to declare your project as a child of the starter parent by editing the pom.xml file.
@@ -67,7 +56,7 @@ Getting started This is a module in the starter set, so you first need to declar
     </div>
     
     <div class="coffeenet--project-cell">
-        <header class="coffeenet--project-cell-header">
+        <div class="coffeenet--project-cell-header">
             <a href="/projects/starter-logging/">Starter - Logging</a>
 
             
@@ -76,7 +65,7 @@ Getting started This is a module in the starter set, so you first need to declar
                      alt="GitHub Logo">
             </a>
             
-        </header>
+        </div>
         <div class="coffeenet--project-cell-content">
             CoffeeNet Starter - Logging This CoffeeNet starter configures a consistent logging format and behaviour through all of your CoffeeNet applications.
 Getting started This is a module in the starter set, so you first need to declare your project as a child of the starter parent by editing the pom.xml file.
@@ -91,7 +80,7 @@ Getting started This is a module in the starter set, so you first need to declar
     </div>
     
     <div class="coffeenet--project-cell">
-        <header class="coffeenet--project-cell-header">
+        <div class="coffeenet--project-cell-header">
             <a href="/projects/starter-navigation-javascript/">Starter - Navigation Javascript</a>
 
             
@@ -100,7 +89,7 @@ Getting started This is a module in the starter set, so you first need to declar
                      alt="GitHub Logo">
             </a>
             
-        </header>
+        </div>
         <div class="coffeenet--project-cell-content">
             CoffeeNet Starter Navigation Javascript This CoffeeNet started is dedicated to provide a simple and easy way to integrate the CoffeeNet web navigation behaviour with javascript as your rendering engine.
 Getting started This is a module in the starter set, so you first need to declare your project as a child of the starter parent by editing the pom.xml file.
@@ -114,7 +103,7 @@ Getting started This is a module in the starter set, so you first need to declar
     </div>
     
     <div class="coffeenet--project-cell">
-        <header class="coffeenet--project-cell-header">
+        <div class="coffeenet--project-cell-header">
             <a href="/projects/starter-navigation-thymeleaf/">Starter - Navigation Thymeleaf</a>
 
             
@@ -123,7 +112,7 @@ Getting started This is a module in the starter set, so you first need to declar
                      alt="GitHub Logo">
             </a>
             
-        </header>
+        </div>
         <div class="coffeenet--project-cell-content">
             CoffeeNet Starter Navigation Thymeleaf This CoffeeNet started is dedicated to provide a simple and easy way to integrate the CoffeeNet navigation behaviour with thymeleaf 2 into your application.
 Getting started This is a module in the starter set, so you first need to declare your project as a child of the starter parent by editing the pom.xml file.
@@ -137,7 +126,7 @@ Getting started This is a module in the starter set, so you first need to declar
     </div>
     
     <div class="coffeenet--project-cell">
-        <header class="coffeenet--project-cell-header">
+        <div class="coffeenet--project-cell-header">
             <a href="/projects/starter-security/">Starter - Security</a>
 
             
@@ -146,7 +135,7 @@ Getting started This is a module in the starter set, so you first need to declar
                      alt="GitHub Logo">
             </a>
             
-        </header>
+        </div>
         <div class="coffeenet--project-cell-content">
             CoffeeNet Starter - Security This CoffeeNet starter secures your application with spring security and provides access with OAuth2 and the CoffeeNet Auth Server. By default all endpoints are secured, but can be configured.
 Getting started This is a module in the starter set, so you first need to declare your project as a child of the starter parent by editing the pom.xml file.
@@ -160,7 +149,7 @@ Getting started This is a module in the starter set, so you first need to declar
     </div>
     
     <div class="coffeenet--project-cell">
-        <header class="coffeenet--project-cell-header">
+        <div class="coffeenet--project-cell-header">
             <a href="/projects/auth-server/">Auth Server</a>
 
             
@@ -169,7 +158,7 @@ Getting started This is a module in the starter set, so you first need to declar
                      alt="GitHub Logo">
             </a>
             
-        </header>
+        </div>
         <div class="coffeenet--project-cell-content">
             CoffeeNet Auth Server The CoffeeNet Auth Server is an OAuth2 provider to achieve single sign-on for the CoffeeNet. It authenticates against a LDAP-Server. See how to configure LDAP To use the Auth-Server in your application, see README of CoffeeNet Starter Security.
 Configuration Developer Mode The Auth-Server can be started in developer mode by setting the property auth.development to true. By doing this, a default client is created during startup.
@@ -182,7 +171,7 @@ Configuration Developer Mode The Auth-Server can be started in developer mode by
     </div>
     
     <div class="coffeenet--project-cell">
-        <header class="coffeenet--project-cell-header">
+        <div class="coffeenet--project-cell-header">
             <a href="/projects/config-server/">Config Server</a>
 
             
@@ -191,7 +180,7 @@ Configuration Developer Mode The Auth-Server can be started in developer mode by
                      alt="GitHub Logo">
             </a>
             
-        </header>
+        </div>
         <div class="coffeenet--project-cell-content">
             CoffeeNet Config Server The CoffeeNet Config Server is based on spring-cloud-config-server that is wrapped around with the CoffeeNet infrastructure like logging and discovery.
 Configuration Please take a look at https://cloud.spring.io/spring-cloud-config/spring-cloud-config.html
@@ -206,7 +195,7 @@ config-server: keystore: enabled: false public-key: 'file:coffeenet-public.cert'
     </div>
     
     <div class="coffeenet--project-cell">
-        <header class="coffeenet--project-cell-header">
+        <div class="coffeenet--project-cell-header">
             <a href="/projects/discovery-server/">Discovery Server</a>
 
             
@@ -215,7 +204,7 @@ config-server: keystore: enabled: false public-key: 'file:coffeenet-public.cert'
                      alt="GitHub Logo">
             </a>
             
-        </header>
+        </div>
         <div class="coffeenet--project-cell-content">
              
 CoffeeNet Service Discovery How to use Development ./mvnw clean spring-boot:run  
@@ -224,7 +213,7 @@ CoffeeNet Service Discovery How to use Development ./mvnw clean spring-boot:run
     </div>
     
     <div class="coffeenet--project-cell">
-        <header class="coffeenet--project-cell-header">
+        <div class="coffeenet--project-cell-header">
             <a href="/projects/frontpage/">Frontpage</a>
 
             
@@ -233,7 +222,7 @@ CoffeeNet Service Discovery How to use Development ./mvnw clean spring-boot:run
                      alt="GitHub Logo">
             </a>
             
-        </header>
+        </div>
         <div class="coffeenet--project-cell-content">
             CoffeeNet Frontpage the personalisable frontpage of the CoffeeNet The CoffeeNet Frontpage is a personalisable landingpage, which uses a plugin based mechanism for adding widgets like feeds, clock or isLieb-comic. You can write your own plugin and intregrate with the frontpage.
 Requirements  Java 8 Docker 17.06.0+ Docker Compose 1.20.x  Development Start application and environment (MongoDB) is used for persistence)
@@ -250,13 +239,7 @@ docker-compose up ./mvnw clean spring-boot:run  Spring Boot DevTools are also in
 
 
 <footer class="coffeenet--footer">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm">
-                <p class="text-center">Copyright &copy; 2018 CoffeeNet.</p>
-            </div>
-        </div>
-    </div>
+    <p>Copyright &copy; 2018 CoffeeNet.</p>
 </footer>
 
 </body>
