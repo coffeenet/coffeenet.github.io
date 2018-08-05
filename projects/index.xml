@@ -11,7 +11,7 @@
     
     
     <item>
-      <title>Starter - Discovery</title>
+      <title>CoffeeNet - Starter Discovery</title>
       <link>http://coffeenet.rocks/projects/starter-discovery/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -22,7 +22,7 @@ Getting started This is a module in the starter set, so you first need to declar
     </item>
     
     <item>
-      <title>Starter - Logging</title>
+      <title>CoffeeNet - Starter Logging</title>
       <link>http://coffeenet.rocks/projects/starter-logging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -34,7 +34,7 @@ Getting started This is a module in the starter set, so you first need to declar
     </item>
     
     <item>
-      <title>Starter - Navigation Javascript</title>
+      <title>CoffeeNet - Starter Navigation Javascript</title>
       <link>http://coffeenet.rocks/projects/starter-navigation-javascript/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -45,7 +45,7 @@ Getting started This is a module in the starter set, so you first need to declar
     </item>
     
     <item>
-      <title>Starter - Navigation Thymeleaf</title>
+      <title>CoffeeNet - Starter Navigation Thymeleaf</title>
       <link>http://coffeenet.rocks/projects/starter-navigation-thymeleaf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -56,7 +56,7 @@ Getting started This is a module in the starter set, so you first need to declar
     </item>
     
     <item>
-      <title>Starter - Security</title>
+      <title>CoffeeNet - Starter Security</title>
       <link>http://coffeenet.rocks/projects/starter-security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -67,7 +67,7 @@ Getting started This is a module in the starter set, so you first need to declar
     </item>
     
     <item>
-      <title>Auth Server</title>
+      <title>CoffeeNet - Auth Server</title>
       <link>http://coffeenet.rocks/projects/auth-server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -77,7 +77,7 @@ Configuration Developer Mode The Auth-Server can be started in developer mode by
     </item>
     
     <item>
-      <title>Config Server</title>
+      <title>CoffeeNet - Config Server</title>
       <link>http://coffeenet.rocks/projects/config-server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -89,7 +89,7 @@ config-server: keystore: enabled: false public-key: &#39;file:coffeenet-public.c
     </item>
     
     <item>
-      <title>Discovery Server</title>
+      <title>CoffeeNet - Discovery Server</title>
       <link>http://coffeenet.rocks/projects/discovery-server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -99,7 +99,7 @@ CoffeeNet Service Discovery How to use Development ./mvnw clean spring-boot:run 
     </item>
     
     <item>
-      <title>Frontpage</title>
+      <title>CoffeeNet - Frontpage</title>
       <link>http://coffeenet.rocks/projects/frontpage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
