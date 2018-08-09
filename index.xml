@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CoffeeNet</title>
-    <link>http://coffeenet.rocks/</link>
+    <link>https://coffeenet.rocks/</link>
     <description>Recent content on CoffeeNet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://coffeenet.rocks/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://coffeenet.rocks/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CoffeeNet - Starter Discovery</title>
-      <link>http://coffeenet.rocks/projects/starter-discovery/</link>
+      <link>https://coffeenet.rocks/projects/starter-discovery/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://coffeenet.rocks/projects/starter-discovery/</guid>
+      <guid>https://coffeenet.rocks/projects/starter-discovery/</guid>
       <description>CoffeeNet Starter - Discovery This CoffeeNet starter configures the service discovery for your application, provides your application as client to the discovery service and offers already known clients to you by the coffee.synyx.autoconfigure.discovery.service.CoffeeNetAppService.
 Getting started This is a module in the starter set, so you first need to declare your project as a child of the starter parent by editing the pom.xml file.
 &amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;coffee.synyx&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;coffeenet-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${parent.version}&amp;lt;/version&amp;gt; &amp;lt;relativePath /&amp;gt; &amp;lt;/parent&amp;gt;  and adding the repository to receive the dependencies</description>
@@ -23,10 +23,10 @@ Getting started This is a module in the starter set, so you first need to declar
     
     <item>
       <title>CoffeeNet - Starter Logging</title>
-      <link>http://coffeenet.rocks/projects/starter-logging/</link>
+      <link>https://coffeenet.rocks/projects/starter-logging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://coffeenet.rocks/projects/starter-logging/</guid>
+      <guid>https://coffeenet.rocks/projects/starter-logging/</guid>
       <description>CoffeeNet Starter - Logging This CoffeeNet starter configures a consistent logging format and behaviour through all of your CoffeeNet applications.
 Getting started This is a module in the starter set, so you first need to declare your project as a child of the starter parent by editing the pom.xml file.
 &amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;coffee.synyx&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;coffeenet-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${parent.version}&amp;lt;/version&amp;gt; &amp;lt;relativePath /&amp;gt; &amp;lt;/parent&amp;gt;  and adding the repository to receive the dependencies
@@ -35,10 +35,10 @@ Getting started This is a module in the starter set, so you first need to declar
     
     <item>
       <title>CoffeeNet - Starter Navigation Javascript</title>
-      <link>http://coffeenet.rocks/projects/starter-navigation-javascript/</link>
+      <link>https://coffeenet.rocks/projects/starter-navigation-javascript/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://coffeenet.rocks/projects/starter-navigation-javascript/</guid>
+      <guid>https://coffeenet.rocks/projects/starter-navigation-javascript/</guid>
       <description>CoffeeNet Starter Navigation Javascript This CoffeeNet started is dedicated to provide a simple and easy way to integrate the CoffeeNet web navigation behaviour with javascript as your rendering engine.
 Getting started This is a module in the starter set, so you first need to declare your project as a child of the starter parent by editing the pom.xml file.
 &amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;coffee.synyx&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;coffeenet-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${parent.version}&amp;lt;/version&amp;gt; &amp;lt;relativePath /&amp;gt; &amp;lt;/parent&amp;gt;  and adding the repository to receive the dependencies</description>
@@ -46,10 +46,10 @@ Getting started This is a module in the starter set, so you first need to declar
     
     <item>
       <title>CoffeeNet - Starter Navigation Thymeleaf</title>
-      <link>http://coffeenet.rocks/projects/starter-navigation-thymeleaf/</link>
+      <link>https://coffeenet.rocks/projects/starter-navigation-thymeleaf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://coffeenet.rocks/projects/starter-navigation-thymeleaf/</guid>
+      <guid>https://coffeenet.rocks/projects/starter-navigation-thymeleaf/</guid>
       <description>CoffeeNet Starter Navigation Thymeleaf This CoffeeNet started is dedicated to provide a simple and easy way to integrate the CoffeeNet navigation behaviour with thymeleaf 2 into your application.
 Getting started This is a module in the starter set, so you first need to declare your project as a child of the starter parent by editing the pom.xml file.
 &amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;coffee.synyx&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;coffeenet-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${parent.version}&amp;lt;/version&amp;gt; &amp;lt;relativePath /&amp;gt; &amp;lt;/parent&amp;gt;  and adding the repository to receive the dependencies</description>
@@ -57,10 +57,10 @@ Getting started This is a module in the starter set, so you first need to declar
     
     <item>
       <title>CoffeeNet - Starter Security</title>
-      <link>http://coffeenet.rocks/projects/starter-security/</link>
+      <link>https://coffeenet.rocks/projects/starter-security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://coffeenet.rocks/projects/starter-security/</guid>
+      <guid>https://coffeenet.rocks/projects/starter-security/</guid>
       <description>CoffeeNet Starter - Security This CoffeeNet starter secures your application with spring security and provides access with OAuth2 and the CoffeeNet Auth Server. By default all endpoints are secured, but can be configured.
 Getting started This is a module in the starter set, so you first need to declare your project as a child of the starter parent by editing the pom.xml file.
 &amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;coffee.synyx&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;coffeenet-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${parent.version}&amp;lt;/version&amp;gt; &amp;lt;relativePath /&amp;gt; &amp;lt;/parent&amp;gt;  and adding the repository to receive the dependencies</description>
@@ -68,20 +68,20 @@ Getting started This is a module in the starter set, so you first need to declar
     
     <item>
       <title>CoffeeNet - Auth Server</title>
-      <link>http://coffeenet.rocks/projects/auth-server/</link>
+      <link>https://coffeenet.rocks/projects/auth-server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://coffeenet.rocks/projects/auth-server/</guid>
+      <guid>https://coffeenet.rocks/projects/auth-server/</guid>
       <description>CoffeeNet Auth Server The CoffeeNet Auth Server is an OAuth2 provider to achieve single sign-on for the CoffeeNet. It authenticates against a LDAP-Server. See how to configure LDAP To use the Auth-Server in your application, see README of CoffeeNet Starter Security.
 Configuration Developer Mode The Auth-Server can be started in developer mode by setting the property auth.development to true. By doing this, a default client is created during startup.</description>
     </item>
     
     <item>
       <title>CoffeeNet - Config Server</title>
-      <link>http://coffeenet.rocks/projects/config-server/</link>
+      <link>https://coffeenet.rocks/projects/config-server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://coffeenet.rocks/projects/config-server/</guid>
+      <guid>https://coffeenet.rocks/projects/config-server/</guid>
       <description>CoffeeNet Config Server The CoffeeNet Config Server is based on spring-cloud-config-server that is wrapped around with the CoffeeNet infrastructure like logging and discovery.
 Configuration Please take a look at https://cloud.spring.io/spring-cloud-config/spring-cloud-config.html
 Public Key If the authorization server will sign the JWT with his private key this application needs the public key to verify the signature.
@@ -90,20 +90,20 @@ config-server: keystore: enabled: false public-key: &#39;file:coffeenet-public.c
     
     <item>
       <title>CoffeeNet - Discovery Server</title>
-      <link>http://coffeenet.rocks/projects/discovery-server/</link>
+      <link>https://coffeenet.rocks/projects/discovery-server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://coffeenet.rocks/projects/discovery-server/</guid>
+      <guid>https://coffeenet.rocks/projects/discovery-server/</guid>
       <description> 
 CoffeeNet Service Discovery How to use Development ./mvnw clean spring-boot:run  </description>
     </item>
     
     <item>
       <title>CoffeeNet - Frontpage</title>
-      <link>http://coffeenet.rocks/projects/frontpage/</link>
+      <link>https://coffeenet.rocks/projects/frontpage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://coffeenet.rocks/projects/frontpage/</guid>
+      <guid>https://coffeenet.rocks/projects/frontpage/</guid>
       <description>CoffeeNet Frontpage the personalisable frontpage of the CoffeeNet The CoffeeNet Frontpage is a personalisable landingpage, which uses a plugin based mechanism for adding widgets like feeds, clock or isLieb-comic. You can write your own plugin and intregrate with the frontpage.
 Requirements  Java 8 Docker 17.06.0+ Docker Compose 1.20.x  Development Start application and environment (MongoDB) is used for persistence)
 docker-compose up ./mvnw clean spring-boot:run  Spring Boot DevTools are also included for inflight changes.</description>

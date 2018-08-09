@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on CoffeeNet</title>
-    <link>http://coffeenet.rocks/categories/</link>
+    <link>https://coffeenet.rocks/categories/</link>
     <description>Recent content in Categories on CoffeeNet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://coffeenet.rocks/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://coffeenet.rocks/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
