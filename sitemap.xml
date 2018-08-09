@@ -39,10 +39,6 @@
   </url>
   
   <url>
-    <loc>https://coffeenet.rocks/health/</loc>
-  </url>
-  
-  <url>
     <loc>https://coffeenet.rocks/categories/</loc>
     <priority>0</priority>
   </url>
