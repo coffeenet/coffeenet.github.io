@@ -1,6 +1,6 @@
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-        .register('/service-worker.js')
+        .register('https://coffeenet.rocks/service-worker.js')
         .then(function (reg) {
             console.log(`[ServiceWorker] Registered in scope ${reg.scope}`);
         });
