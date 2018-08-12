@@ -1,4 +1,4 @@
-const buildTime = '1534010533';
+const buildTime = '1534059510';
 const cacheName = `coffeenet-homepage-v${buildTime}`;
 const filesToCache = [
     '/',
