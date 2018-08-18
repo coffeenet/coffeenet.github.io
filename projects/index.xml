@@ -39,7 +39,7 @@ Getting started This is a module in the starter set, so you first need to declar
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://coffeenet.rocks/projects/starter-navigation-javascript/</guid>
-      <description>CoffeeNet Starter Navigation Javascript This CoffeeNet started is dedicated to provide a simple and easy way to integrate the CoffeeNet web navigation behaviour with javascript as your rendering engine.
+      <description>CoffeeNet Starter Navigation Javascript This CoffeeNet starter is dedicated to provide a simple and easy way to integrate the CoffeeNet web navigation behaviour with javascript as your rendering engine.
 Getting started This is a module in the starter set, so you first need to declare your project as a child of the starter parent by editing the pom.xml file.
 &amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;coffee.synyx&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;coffeenet-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${parent.version}&amp;lt;/version&amp;gt; &amp;lt;relativePath /&amp;gt; &amp;lt;/parent&amp;gt;  and adding the repository to receive the dependencies</description>
     </item>
@@ -50,7 +50,7 @@ Getting started This is a module in the starter set, so you first need to declar
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://coffeenet.rocks/projects/starter-navigation-thymeleaf/</guid>
-      <description>CoffeeNet Starter Navigation Thymeleaf This CoffeeNet started is dedicated to provide a simple and easy way to integrate the CoffeeNet navigation behaviour with thymeleaf 2 into your application.
+      <description>CoffeeNet Starter Navigation Thymeleaf This CoffeeNet starter is dedicated to provide a simple and easy way to integrate the CoffeeNet navigation behaviour with thymeleaf 2 into your application.
 Getting started This is a module in the starter set, so you first need to declare your project as a child of the starter parent by editing the pom.xml file.
 &amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;coffee.synyx&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;coffeenet-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${parent.version}&amp;lt;/version&amp;gt; &amp;lt;relativePath /&amp;gt; &amp;lt;/parent&amp;gt;  and adding the repository to receive the dependencies</description>
     </item>
