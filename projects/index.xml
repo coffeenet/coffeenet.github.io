@@ -34,6 +34,19 @@ Getting started This is a module in the starter set, so you first need to declar
     </item>
     
     <item>
+      <title>CoffeeNet - Starter Monitoring</title>
+      <link>https://coffeenet.rocks/projects/starter-monitoring/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://coffeenet.rocks/projects/starter-monitoring/</guid>
+      <description>CoffeeNet Starter - Monitoring This CoffeeNet starter is designed to add information to the
+/health endpoint about the status of CoffeeNet services like
+the Auth Server depending on the starters that are used in the project.
+If you use the coffeenet-security-starter with the integration profile
+then a check against the configured Auth Server will be done to see if the Auth Server is available and your project should work correctly</description>
+    </item>
+    
+    <item>
       <title>CoffeeNet - Starter Navigation Javascript</title>
       <link>https://coffeenet.rocks/projects/starter-navigation-javascript/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
