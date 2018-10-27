@@ -84,6 +84,31 @@ Navigation Javascript provides client side rendering of the navigation bar with 
     </item>
     
     <item>
+      <title>CoffeeNet - Starters</title>
+      <link>https://coffeenet.rocks/projects/starters/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://coffeenet.rocks/projects/starters/</guid>
+      <description>CoffeeNet Starters These projects contains all CoffeeNet starters, which can be used to integrate an application into the CoffeeNet.
+Security provides the authentication against the CoffeeNet auth server.
+Service Discovery provides the integration to dustribute and search of CoffeeNet applications.
+Logging provides a consistent and centralised logging.
+Monitoring provides information about the service.
+Navigation Thymleaf provides the server side rendering of the navigation bar via thymeleaf.
+Navigation Javascript provides client side rendering of the navigation bar with javasript.</description>
+    </item>
+    
+    <item>
+      <title>CoffeeNet - Auth Server</title>
+      <link>https://coffeenet.rocks/projects/auth-server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://coffeenet.rocks/projects/auth-server/</guid>
+      <description>CoffeeNet Auth Server The CoffeeNet Auth Server is an OAuth2 provider to achieve single sign-on for the CoffeeNet. It authenticates against a LDAP-Server. See how to configure LDAP To use the Auth-Server in your application, see README of CoffeeNet Starter Security.
+Configuration Developer Mode The Auth-Server can be started in developer mode by setting the property auth.development to true. By doing this, a default client is created during startup.</description>
+    </item>
+    
+    <item>
       <title>CoffeeNet - Config Server</title>
       <link>https://coffeenet.rocks/projects/config-server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
