@@ -69,14 +69,18 @@ Getting started This is a module in the starter set, so you first need to declar
     </item>
     
     <item>
-      <title>CoffeeNet - Starter Security</title>
+      <title>CoffeeNet - Starter security</title>
       <link>https://coffeenet.rocks/projects/starter-security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://coffeenet.rocks/projects/starter-security/</guid>
-      <description>CoffeeNet Starter - Security This CoffeeNet starter secures your application with spring security and provides access with OAuth2 and the CoffeeNet Auth Server. By default all endpoints are secured, but can be configured.
-Getting started This is a module in the starter set, so you first need to declare your project as a child of the starter parent by editing the pom.xml file.
-&amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;coffee.synyx&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;coffeenet-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${parent.version}&amp;lt;/version&amp;gt; &amp;lt;relativePath /&amp;gt; &amp;lt;/parent&amp;gt;  and adding the repository to receive the dependencies</description>
+      <description>CoffeeNet Starters These projects contains all CoffeeNet starters, which can be used to integrate an application into the CoffeeNet.
+Security provides the authentication against the CoffeeNet auth server.
+Service Discovery provides the integration to dustribute and search of CoffeeNet applications.
+Logging provides a consistent and centralised logging.
+Monitoring provides information about the service.
+Navigation Thymleaf provides the server side rendering of the navigation bar via thymeleaf.
+Navigation Javascript provides client side rendering of the navigation bar with javasript.</description>
     </item>
     
     <item>
