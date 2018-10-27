@@ -84,21 +84,6 @@ Navigation Javascript provides client side rendering of the navigation bar with 
     </item>
     
     <item>
-      <title>CoffeeNet - Starters</title>
-      <link>https://coffeenet.rocks/projects/starters/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://coffeenet.rocks/projects/starters/</guid>
-      <description>CoffeeNet Starters These projects contains all CoffeeNet starters, which can be used to integrate an application into the CoffeeNet.
-Security provides the authentication against the CoffeeNet auth server.
-Service Discovery provides the integration to dustribute and search of CoffeeNet applications.
-Logging provides a consistent and centralised logging.
-Monitoring provides information about the service.
-Navigation Thymleaf provides the server side rendering of the navigation bar via thymeleaf.
-Navigation Javascript provides client side rendering of the navigation bar with javasript.</description>
-    </item>
-    
-    <item>
       <title>CoffeeNet - Auth Server</title>
       <link>https://coffeenet.rocks/projects/auth-server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
