@@ -43,6 +43,10 @@
   </url>
   
   <url>
+    <loc>https://coffeenet.rocks/projects/coffeenet-dockerized/</loc>
+  </url>
+  
+  <url>
     <loc>https://coffeenet.rocks/categories/</loc>
     <priority>0</priority>
   </url>

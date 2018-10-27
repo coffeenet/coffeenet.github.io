@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+<meta name="description" content="The Homepage of the CoffeeNet">
+<meta name="theme-color" content="#4DA97F"/>
+<link rel="manifest" href="/manifest.json">
+
+<title>CoffeeNet - Example of the CoffeeNet architecture</title>
+
+
+<link rel="stylesheet" href="/css/coffeenet.css"/>
+
+
+
+
+
+
+
+
+<script src="https://coffeenet.rocks/js/app.js" async></script>
+</head>
+<body>
+
+
+<header class="coffeenet--header">
+    <div class="coffeenet--header-inner">
+        <a href="https://coffeenet.rocks/">
+            <img class="coffeenet--header-logo" src="https://coffeenet.rocks/img/coffeenet_logo.png" alt="CoffeeNet Logo">
+        </a>
+    </div>
+</header>
+
+
+<section class="coffeenet--teaser">
+    <img class="coffeenet--teaser-bar" src="https://coffeenet.rocks/img/element_bar.svg" title="CoffeeNet" alt="CoffeeNet Counter">
+</section>
+
+
+<main class="coffeenet--main-single">
+    <section class="coffeenet--main-single-inner">
+        
+
+<h1 id="coffeenet-dockerized">CoffeeNet Dockerized</h1>
+
+<p>This projects provides all necessary information about the<br />
+CoffeeNet structure and the services for an easy startup.</p>
+
+<p>When you run the <code>docker-compose.yml</code> file as describes below<br />
+a complete CoffeeNet system will be provided that consists of:</p>
+
+<p>The <strong>Core</strong> of the CoffeeNet:
+- CoffeeNet Auth Server (<a href="http://localhost:9999">http://localhost:9999</a>)
+- Coffeenet Discovery Server (<a href="http://localhost:8761">http://localhost:8761</a>)
+- Coffeenet Config Server (<a href="http://localhost:8888">http://localhost:8888</a>)</p>
+
+<p>Optional <strong>Central</strong> Services of the CoffeeNet:<br />
+For additional centralized <em>logging</em> we use graylog, that plays together with<br />
+the <a href="https://github.com/coffeenet/coffeenet-starter/tree/master/coffeenet-starter-logging">CoffeeNet Starter Logging</a>
+- Graylog (<a href="http://localhost:9000">http://localhost:9000</a> - admin/admin)</p>
+
+<p><strong>Applications</strong> of the CoffeeNet to enrich the functionality:
+- <a href="https://github.com/coffeenet/coffeenet-frontpage">CoffeeNet Frontpage</a> (<a href="http://localhost:8081">http://localhost:8081</a>)
+- &hellip; or any other application that you developed with the <a href="https://github.com/coffeenet/coffeenet-starter/">CoffeeNet Starters</a></p>
+
+<p>If everything started correctly you will have a fully integrated CoffeeNet environment with the following users:</p>
+
+<table>
+<thead>
+<tr>
+<th>User</th>
+<th>Username</th>
+<th>Password</th>
+<th>Roles</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>admin</td>
+<td>admin</td>
+<td>admin</td>
+<td>COFFEENET-ADMIN &amp; USER</td>
+</tr>
+
+<tr>
+<td>user</td>
+<td>user</td>
+<td>user</td>
+<td>USER</td>
+</tr>
+</tbody>
+</table>
+
+<p>and 2000 users for load tests e.g. with the credentials user{1..2000}/user{1..2000}
+(e.g. user1/user1, user2/user2,&hellip;) without a role defined.</p>
+
+<p><img src="architecture-frontpage.png" alt="CoffeeNetArchitecture" title="CoffeeNet Architecture" /></p>
+
+<h2 id="requirements">Requirements</h2>
+
+<ul>
+<li>Java 8</li>
+<li>Docker 17.12.0+</li>
+<li>Docker Compose 1.21.x</li>
+</ul>
+
+<h2 id="usage-with-docker-compose">Usage with docker-compose</h2>
+
+<p>Build the image:</p>
+
+<pre><code class="language-bash">docker-compose build
+</code></pre>
+
+<p>Start all images</p>
+
+<pre><code class="language-bash">docker-compose up
+</code></pre>
+
+<p>Or start a specific image</p>
+
+<pre><code>docker-compose up ${dockerService}
+</code></pre>
+
+<h2 id="ldap-browser-editor">LDAP browser/editor</h2>
+
+<h3 id="apache-directory-manager">Apache Directory Manager</h3>
+
+<h4 id="macos">macOS</h4>
+
+<p>Install Apache Directory Manager (for example with Homebrew)</p>
+
+<pre><code class="language-bash">brew install Caskroom/cask/apache-directory-studio
+</code></pre>
+
+<h4 id="linux">Linux</h4>
+
+<p>Download and start the <a href="http://directory.apache.org/studio/download/download-linux.html">Apache Directory Manager</a></p>
+
+    </section>
+</main>
+
+
+<footer class="coffeenet--footer">
+    <p>Copyright &copy; 2018 CoffeeNet.</p>
+</footer>
+
+</body>
+</html>
