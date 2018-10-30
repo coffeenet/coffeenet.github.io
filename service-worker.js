@@ -1,4 +1,4 @@
-const buildTime = '1540919801';
+const buildTime = '1540928211';
 const cacheName = `coffeenet-homepage-v${buildTime}`;
 const filesToCache = [
     '/',
@@ -16,7 +16,9 @@ const filesToCache = [
     '/projects/starter-logging/',
     '/projects/starter-navigation-javascript/',
     '/projects/starter-navigation-thymeleaf/',
-    '/projects/starter-security/'
+    '/projects/starter-security/',
+    '/projects/starter-monitoring/',
+    '/projects/coffeenet-dockerized/'
 ];
 
 self.addEventListener('install', function (e) {
