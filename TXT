@@ -1,0 +1,1 @@
+coffeenet.rocks 3600 IN TXT 'https://issues.sonatype.org/browse/OSSRH-45873'

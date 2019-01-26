@@ -48,7 +48,7 @@
 
 <p>This CoffeeNet starter configures the service discovery for your application,
 provides your application as client to the discovery service and offers already
-known clients to you by the <code>coffee.synyx.autoconfigure.discovery.service.CoffeeNetAppService</code>.</p>
+known clients to you by the <code>rocks.coffeenet.autoconfigure.discovery.service.CoffeeNetAppService</code>.</p>
 
 <h2 id="getting-started">Getting started</h2>
 
@@ -56,27 +56,17 @@ known clients to you by the <code>coffee.synyx.autoconfigure.discovery.service.C
 as a child of the starter <code>parent</code> by editing the <code>pom.xml</code> file.</p>
 
 <pre><code class="language-xml">&lt;parent&gt;
-    &lt;groupId&gt;coffee.synyx&lt;/groupId&gt;
+    &lt;groupId&gt;rocks.coffeenet&lt;/groupId&gt;
     &lt;artifactId&gt;coffeenet-starter-parent&lt;/artifactId&gt;
     &lt;version&gt;${parent.version}&lt;/version&gt;
     &lt;relativePath /&gt;
 &lt;/parent&gt;
 </code></pre>
 
-<p>and adding the repository to receive the dependencies</p>
-
-<pre><code class="language-xml">&lt;repositories&gt;
-  &lt;repository&gt;
-    &lt;id&gt;releases.public.nexus.synyx.de&lt;/id&gt;
-    &lt;url&gt;http://nexus.synyx.de/content/repositories/public-releases&lt;/url&gt;
-  &lt;/repository&gt;
-&lt;/repositories&gt;
-</code></pre>
-
 <p>Now you can enable service discovery in your project, by first adding the dependency:</p>
 
 <pre><code class="language-xml">&lt;dependency&gt;
-    &lt;groupId&gt;coffee.synyx&lt;/groupId&gt;
+    &lt;groupId&gt;rocks.coffeenet&lt;/groupId&gt;
     &lt;artifactId&gt;starter-discovery&lt;/artifactId&gt;
 &lt;/dependency&gt;
 </code></pre>
