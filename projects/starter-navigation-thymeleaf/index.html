@@ -62,22 +62,12 @@ as a child of the starter <code>parent</code> by editing the <code>pom.xml</code
 &lt;/parent&gt;
 </code></pre>
 
-<p>and adding the repository to receive the dependencies</p>
-
-<pre><code class="language-xml">&lt;repositories&gt;
-  &lt;repository&gt;
-    &lt;id&gt;releases.public.nexus.synyx.de&lt;/id&gt;
-    &lt;url&gt;http://nexus.synyx.de/content/repositories/public-releases&lt;/url&gt;
-  &lt;/repository&gt;
-&lt;/repositories&gt;
-</code></pre>
-
 <p>Now you can enable the thymeleaf navigation bar in your project,
 by first adding the dependency:</p>
 
 <pre><code class="language-xml">&lt;dependency&gt;
     &lt;groupId&gt;rocks.coffeenet&lt;/groupId&gt;
-    &lt;artifactId&gt;starter-navigation-thymeleaf&lt;/artifactId&gt;
+    &lt;artifactId&gt;coffeenet-starter-navigation-thymeleaf&lt;/artifactId&gt;
 &lt;/dependency&gt;
 </code></pre>
 

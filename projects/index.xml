@@ -29,8 +29,7 @@ Getting started This is a module in the starter set, so you first need to declar
       <guid>https://coffeenet.rocks/projects/starter-logging/</guid>
       <description>CoffeeNet Starter - Logging This CoffeeNet starter configures a consistent logging format and behaviour through all of your CoffeeNet applications.
 Getting started This is a module in the starter set, so you first need to declare your project as a child of the starter parent by editing the pom.xml file.
-&amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;rocks.coffeenet&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;coffeenet-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${parent.version}&amp;lt;/version&amp;gt; &amp;lt;relativePath /&amp;gt; &amp;lt;/parent&amp;gt;  and adding the repository to receive the dependencies
-&amp;lt;repositories&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;releases.public.nexus.synyx.de&amp;lt;/id&amp;gt; &amp;lt;url&amp;gt;http://nexus.</description>
+&amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;rocks.coffeenet&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;coffeenet-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${parent.version}&amp;lt;/version&amp;gt; &amp;lt;relativePath /&amp;gt; &amp;lt;/parent&amp;gt;  Now you can enable logging in your project, by first adding the dependency:</description>
     </item>
     
     <item>
@@ -54,7 +53,7 @@ then a check against the configured Auth Server will be done to see if the Auth 
       <guid>https://coffeenet.rocks/projects/starter-navigation-javascript/</guid>
       <description>CoffeeNet Starter Navigation Javascript This CoffeeNet starter is dedicated to provide a simple and easy way to integrate the CoffeeNet web navigation behaviour with javascript as your rendering engine.
 Getting started This is a module in the starter set, so you first need to declare your project as a child of the starter parent by editing the pom.xml file.
-&amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;rocks.coffeenet&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;coffeenet-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${parent.version}&amp;lt;/version&amp;gt; &amp;lt;relativePath /&amp;gt; &amp;lt;/parent&amp;gt;  and adding the repository to receive the dependencies</description>
+&amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;rocks.coffeenet&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;coffeenet-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${parent.version}&amp;lt;/version&amp;gt; &amp;lt;relativePath /&amp;gt; &amp;lt;/parent&amp;gt;  Now you can enable the javascript navigation bar in your project, by first adding the dependency:</description>
     </item>
     
     <item>
@@ -65,7 +64,7 @@ Getting started This is a module in the starter set, so you first need to declar
       <guid>https://coffeenet.rocks/projects/starter-navigation-thymeleaf/</guid>
       <description>CoffeeNet Starter Navigation Thymeleaf This CoffeeNet starter is dedicated to provide a simple and easy way to integrate the CoffeeNet navigation behaviour with thymeleaf 2 into your application.
 Getting started This is a module in the starter set, so you first need to declare your project as a child of the starter parent by editing the pom.xml file.
-&amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;rocks.coffeenet&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;coffeenet-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${parent.version}&amp;lt;/version&amp;gt; &amp;lt;relativePath /&amp;gt; &amp;lt;/parent&amp;gt;  and adding the repository to receive the dependencies</description>
+&amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;rocks.coffeenet&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;coffeenet-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${parent.version}&amp;lt;/version&amp;gt; &amp;lt;relativePath /&amp;gt; &amp;lt;/parent&amp;gt;  Now you can enable the thymeleaf navigation bar in your project, by first adding the dependency:</description>
     </item>
     
     <item>
@@ -76,10 +75,10 @@ Getting started This is a module in the starter set, so you first need to declar
       <guid>https://coffeenet.rocks/projects/starter-security/</guid>
       <description>CoffeeNet Starters These projects contains all CoffeeNet starters, which can be used to integrate an application into the CoffeeNet.
 Security provides the authentication against the CoffeeNet auth server.
-Service Discovery provides the integration to distribute and search of CoffeeNet applications.
+Discovery provides the integration to distribute and search of CoffeeNet applications.
 Logging provides a consistent and centralised logging.
 Monitoring provides information about the service.
-Navigation Thymleaf provides the server side rendering of the navigation bar via thymeleaf.
+Navigation Thymeleaf provides the server side rendering of the navigation bar via thymeleaf.
 Navigation Javascript provides client side rendering of the navigation bar with javascript.</description>
     </item>
     
