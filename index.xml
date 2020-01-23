@@ -88,7 +88,8 @@ Navigation Javascript provides client side rendering of the navigation bar with 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://coffeenet.rocks/projects/auth-server/</guid>
-      <description>CoffeeNet Auth Server The CoffeeNet Auth Server is an OAuth2 provider to achieve single sign-on for the CoffeeNet. It authenticates against a LDAP-Server. See how to configure LDAP To use the Auth-Server in your application, see README of CoffeeNet Starter Security.
+      <description>Deprecated see https://github.com/spring-projects/spring-security-oauth
+CoffeeNet Auth Server The CoffeeNet Auth Server is an OAuth2 provider to achieve single sign-on for the CoffeeNet. It authenticates against a LDAP-Server. See how to configure LDAP To use the Auth-Server in your application, see README of CoffeeNet Starter Security.
 Configuration Developer Mode The Auth-Server can be started in developer mode by setting the property auth.development to true. By doing this, a default client is created during startup.</description>
     </item>
     
