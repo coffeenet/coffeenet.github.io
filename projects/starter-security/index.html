@@ -44,8 +44,7 @@
     <section class="coffeenet--main-single-inner">
         
 
-<p><a href="https://travis-ci.org/coffeenet/coffeenet-starter"><img src="https://travis-ci.org/coffeenet/coffeenet-starter.svg?branch=master" alt="Build Status" /></a>
-<a href="https://search.maven.org/search?q=g:rocks.coffeenet%20AND%20a:coffeenet-starter&amp;core=gav"><img src="https://maven-badges.herokuapp.com/maven-central/rocks.coffeenet/coffeenet-starter/badge.svg?style=flat" alt="Latest coffeenet-starter on Maven Central" /></a>
+<p><a href="https://sonarcloud.io/organizations/coffeenet/projects"><img src="https://github.com/coffeenet/coffeenet-starter/workflows/CoffeeNet%20Maven%20Build/badge.svg" alt="CoffeeNet Maven Build" /></a> <a href="https://search.maven.org/search?q=g:rocks.coffeenet%20AND%20a:coffeenet-starter&amp;core=gav"><img src="https://maven-badges.herokuapp.com/maven-central/rocks.coffeenet/coffeenet-starter/badge.svg?style=flat" alt="Latest coffeenet-starter on Maven Central" /></a>
 <a href="https://sonarcloud.io/dashboard?id=rocks.coffeenet:coffeenet-starter"><img src="https://sonarcloud.io/api/project_badges/measure?project=rocks.coffeenet:coffeenet-starter&amp;metric=coverage" alt="Sonarcloud Status" /></a></p>
 
 <h1 id="coffeenet-starters">CoffeeNet Starters</h1>
@@ -91,6 +90,41 @@ provides client side rendering of the navigation bar with javascript.</p>
 
 <li><p>commit and push</p></li>
 </ul>
+
+<h2 id="architecture">Architecture</h2>
+
+<h3 id="parent">Parent</h3>
+
+<pre><code>                                    ------------------
+                                    |   Spring Boot  |
+                                    ------------------
+                                             ↑
+                                             |
+                                -----------------------------
+                                |   CoffeeNet Dependencies  |
+                                -----------------------------
+                                             ↑
+                                             | 
+                                  ------------------------
+         -----------------------→ |   CoffeeNet Parent   | ←-----------
+         |                        ------------------------            |
+         |                                                            |
+         |                                                            |
+         |   --------------------------                  -----------------------------
+         |-- |   CoffeeNet Actuator   |                  |   CoffeeNet Application   |
+         |   --------------------------                  -----------------------------
+         |
+         |   -------------------------------
+         |-- |   CoffeeNet Autoconfigure   |
+         |   -------------------------------
+         |   ---------------------------------
+         |-- |   CoffeeNet Starter Discovery |
+         |   ---------------------------------
+         |                 ...
+         |   ---------------------------------------------
+         |-- |   CoffeeNet Starter Navigation Themeleaf  |
+             ---------------------------------------------
+</code></pre>
 
     </section>
 </main>
